@@ -12,5 +12,8 @@ servidor en localhost:3000
    admin@3dz.com
 7- Constraseña:
    admin
+
+LINK DE ESTE REPOSITORIO:
+https://github.com/marianjerez/eccomerceimpresiones3d
    
 
