@@ -29,4 +29,5 @@ Se analizó las diferentes páginas dedicadas a impresiones 3d y hemos tomado a 
 - **[3D Print.me](https://3dprint.me)**
 
 LINK A REPOSITORIO:
+https://github.com/marianjerez/eccomerceimpresiones3d/tree/master
 
