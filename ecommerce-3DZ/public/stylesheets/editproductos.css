@@ -1,0 +1,134 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+
+.formularioedit{
+    display: flex;
+    justify-content: center;
+    color:white;
+    background-color: brown;
+    
+    width: inherit;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+
+input[type="file" i]{
+    max-width: 135px;
+}
+.logo{
+    width: 100px;
+    padding: 20px;
+}
+
+
+h1.errores {
+    text-align: center;
+    text-decoration: underline red;
+    font-weight: 900;
+  }
+  
+  .errores {
+    list-style-type: decimal;
+    color: red;
+    background-color: rgb(248, 227, 91);
+    margin-left:10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    }
+
+.select {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.select div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actualizar {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+.actualizar button{
+    font-size: medium;
+    color: rgb(172, 47, 53);
+    background-color:white;
+    border-radius: 6px;
+    border: none;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+.actualizar button.actualiza:hover {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+  
+  .actualizar button.elimina:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+
+.actualizar a {
+    text-decoration: none;
+}
+
+.actualizar a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+button.salir:hover {
+    background-color: green;
+    color: yellow;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+/*RESPONSIVE*/
+@media (min-width:360px)
+{
+body{
+    margin:auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    width: 360px;
+    border-radius: 8px;
+    border: solid 3px rgb(189,189,189);
+    background-color:rgb(202, 202, 202);
+    
+    
+}
+}

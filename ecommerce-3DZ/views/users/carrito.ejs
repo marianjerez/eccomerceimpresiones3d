@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/carrito.css">
+  <title><%= title %></title>
+</head>
+<body>
+  <%-include('../partials/header') %>
+  <div class="container">
+    <div class="containerCarrito">
+      <header class="headerTitulo">
+          <img src="/images/shopping_cart.ico">
+          <h2>Carrito de Compras 3DZ</h2>
+          <a href="/buyHistory"><p>Historial de compras</p></a>
+      </header>
+      <main class="prd_main">
+        <% if(respuesta.length>0) { %>
+          <% for(i=0; i < respuesta.length; i++){ %>
+            <section class="product_chart">
+              <div class="prd_image">
+                <img id="prd_image" src="<%= respuesta[i].producto.imagen %>">
+              </div>
+              <div class="information">
+                <div class="prd_detail">
+                  <p class="pInfo">Producto</p>
+                  <%= respuesta[i].producto.descripcion%>
+                </div>
+                <div class="prd_price">
+                  <p class="pInfo">Precio</p>
+                  <%= respuesta[i].precio %>
+                </div>
+                <div class="prd_cantidad">
+                  <p class="pInfo">Cantidad</p>
+                  <div class="addition">
+                    <form action="/restarUnProducto" class="formAdd" method="POST" enctype="application/json">
+                      <input type="hidden" name="IDresta" value="<%= respuesta[i].id %>">
+                      <button type="submit" class="operator">-</button>
+                    </form>
+                    <%= respuesta[i].cantidad %>
+                    <form action="/sumarUnProducto" class="formAdd" method="POST" enctype="application/json">
+                      <input type="hidden" name="IDsuma" value="<%= respuesta[i].id %>">
+                      <button type="submit" class="operator">+</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="prd_subTotal">
+                  <p class="pInfo">SubTotal</p>
+                  <%= respuesta[i].subTotal %>
+                </div>
+              </div>  
+              <div class="prd_trash">
+                <!-- DESTRUIR PRODUCTO -->
+                <form action="/deleteFromChart" method="POST" enctype="application/json">
+                  <input type="hidden" name="elemento_id" value="<%= respuesta[i].id %>">
+                  <button type="submit"><i class="fas fa-trash"></i></button>
+              </form>
+              </div>
+            </section>
+          <% } %>
+        <% } else { %>
+          <div class="EmptyMessage">
+            <p>El carrito esta vacio!</p>
+          </div>
+        <% } %>
+        <section class="money_chart">
+          <article class="money_chart_header">
+            <h4>Resumen del Pedido</h4>
+          </article>
+          <article class="money_chart_envio">
+            <p class="type">Envío  $</p> 
+            <p class="number">A convenir</p>  
+          </article>
+          <article class="money_chart_total">
+            <p class="type">Total $ </p>
+            <p class="number"><%= Total %></p> 
+          </article>
+          <% if(respuesta.length>0) { %>
+            <article class="money_chart_button">
+              <form action="/purchase" method="POST" enctype="application/json">
+                <input type="hidden" name="userID" value="<%= user.id %>">
+                <button type="submit">comprar</button>
+              </form>
+            </article>
+          <% } else { %>
+            <div></div>
+          <% } %>
+          <article class="continue_shop">
+            <a href="/products">Seguir Comprando</a>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <%-include('../partials/footer') %>
+</body>
+</html>

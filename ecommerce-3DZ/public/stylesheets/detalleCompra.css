@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+
+html,body{
+    height: 100%;
+}
+
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    min-height: 100%;
+}
+.detalle h1{
+    margin-bottom: 15px;
+    align-self: start;
+    margin-left: 25px;
+}
+.detalle p{
+    margin-bottom: 15px;
+    align-self: start;
+    margin-left: 25px;
+}
+.info{
+    border: solid 2px gray;
+    background-color: lightpink;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 320px;
+    justify-self: center;
+}
+.info p{
+    margin-bottom: 5px;
+}
+.info h4{
+    text-align: center;
+    margin-bottom: 10px;
+}

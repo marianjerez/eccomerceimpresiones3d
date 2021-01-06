@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/createproductos.css">
+    <title>Crear producto</title>
+    <script src="/scripts/create.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="formulario" action="/products/create" method="POST" enctype="multipart/form-data">
+            <div class="errores">
+                <ul></ul>
+            </div>
+            <a href="/"><img class="logo"src="/images/LOGO/LOGOPNG.png"></a>
+            <label for="name">Nombre de producto</label>
+            <input type="text" name="name" id="name" placeholder="Nombre del Producto"><br>
+            
+            <label for="price">Importe $</label>
+            <input type="number" name="price" id="price" ><br>
+            <section class="select">
+                <div>
+                <label for="dimension"></label>
+                <p>Dimensiones</p>
+                <select name="dimension" id="dimension">
+                    <% for(let i = 0; i < medidas.length; i++){ %>
+                    <option value="<%= medidas[i].id %>">
+                        <%= medidas[i].tamanios %>
+                    </option>
+                <% } %>
+                </select>
+                </div>
+                <div>
+                <label for="Material"></label>
+                <p>Material</p>
+                <select name="Material" id="Material">
+                    <% for(let i = 0; i < materials.length; i++){ %>
+                    <option value="<%= materials[i].id %>">
+                        <%= materials[i].tipomaterial %>
+                    </option>
+                <% } %>
+                </select>
+                </div>
+                <div>
+                <label for="pintado"></label>
+                <p>Pintado</p>
+                <select name="pintado" id="pintado">
+                    <option value="no">no</option>
+                    <option value="si">si</option>
+                </select>
+                </div>  
+            </section>
+
+            <label for="image">Imagen</label>
+            <input type="file" name="image" id="image" required><br>
+            <section class="crear">
+                <button class="create" type="submit">Crear</button>
+                <a href="/products/listado">    
+                    <button class="salir">
+                        Salir
+                    </button>
+                </a>
+            </section>
+        </form>
+    </div>
+</body>
+</html>

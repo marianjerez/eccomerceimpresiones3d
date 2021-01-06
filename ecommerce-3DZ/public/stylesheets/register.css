@@ -1,0 +1,205 @@
+
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+  /*background-color: lightgray;*/
+}
+
+/*Estilos Header*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 15px;
+  bottom: 30px;
+  border-bottom: medium ridge gray;
+}
+
+
+header section img {
+  padding: 5px;
+  width: 100%;
+  max-width: 80px;
+}
+
+/*Estilo Section*/
+
+main section.idVista {
+  text-align: center;
+}
+
+main section.idVista h3{
+  margin-top: 0px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+/*Estilos Main*/
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main form ul {
+  list-style: none;
+  padding: 0px;
+}
+
+main form ul li {
+  text-align: center;
+}
+
+h1.errores {
+  text-align: center;
+  text-decoration: underline red;
+  font-weight: 900;
+}
+
+.errores {
+  list-style-type: decimal;
+  color: red;
+  background-color: rgb(248, 227, 91);
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 80%;
+  padding: 5px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  border-bottom: lightblue 1px solid;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover  {
+  background-color  : rgb(233,240,254);
+  box-shadow: 0 4px 12px rgb(233,240,254);
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus  {
+  
+}
+
+.iconForm {
+  padding-top: 4px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+}
+
+main section.remember {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+
+main section.registrar {
+  display: flex;
+  justify-content: center;
+  margin: 5px 20px 20px 20px;
+}
+
+main section.registrar button {
+  font-size: medium;
+  color: white;
+  background-color:rgb(172, 47, 53);
+  border-radius: 6px;
+  border: none;
+  width: 95%;
+  height: 35px;
+}
+
+main section.registrar button:hover {
+  background-color: rgb(236,40,55);
+  box-shadow: 0 4px 16px rgb(172,47,53);
+  transition: all 0.2s ease;
+}
+
+main section.registro  {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+main section.redes_sociales  {
+  display: flex;
+  align-items: flex-end;
+  background-color: rgb(235,236,240);
+  justify-content: center;
+  width: 95%;
+  height: 50px;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+main section.redes_sociales div.logo_redes_sociales {
+  width: 25%;
+  justify-content: center;
+}
+
+main section.redes_sociales div.logo_redes_sociales img {
+width: 50%;
+}
+
+main section.redes_sociales div.logo_redes_sociales button{
+  background: none;
+  border: none;
+}
+
+main section.redes_sociales div.logo_redes_sociales button:hover {
+  height: 50px;
+  width: 100px;
+  margin-left: -5px;
+}
+
+.logo_redes_sociales {
+  width: 25%;
+  justify-content: center;
+}
+
+.img_button {
+  padding: 5px;
+  max-width: 25px;
+}
+
+/*Estilos Footer*/
+
+footer section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+footer section div {
+  margin: 14px 0px;
+  padding-left: 15px;
+}
+
+
+/*Responsive*/
+
+@media (min-width:360px) {
+
+  html {
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+  }
+
+  .container {
+    width: 360px;
+    border: solid 1px rgb(189,189,189);
+    border-radius: 8px;
+    background-color: lightgray;
+  }
+
+}

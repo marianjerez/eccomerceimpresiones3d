@@ -1,0 +1,67 @@
+/*CONFIGURACION INICIAL DIMENSIONES CONTENEDORES*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+html,body{
+  height: 100%;
+}
+
+.container{
+  min-height: 100%;
+  padding-bottom: 130px;
+}
+/*BANNER FRASE*/
+.banner{
+  background: white;
+  margin: 0;
+  padding:0;
+}
+
+div.banner img {
+  width: 100%;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+@media(max-width:768px)
+{
+  .carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    }
+   /* .carousel .container-all{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      margin: auto;
+      position: relative;
+      max-width: 500px;
+      width: 40%;
+      border-radius: 6px;
+      overflow: hidden;
+    }*/
+}
+@media(max-width:400px){
+  .container{
+    min-height: 71%;
+  }
+}  

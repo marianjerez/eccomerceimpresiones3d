@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/modelado.css">
+    <title>Modelado Digital</title>
+</head>
+<body>
+    
+    <form class="modelado_formulario" action="/modelado" method="POST" enctype="multipart/form-data">
+        <a href="/">
+            <img class="logo"src="/images/LOGO/LOGOPNG.png">
+        </a>
+        <h1 class="titulo">Completá los campos y adjuntá las referencias para tu modelado</h1>
+        <label for="name">Nombre del modelado</label>
+        <input type="text" name="name" value=""><br>
+        
+        <label for="dimension">Dimensiones (alto x ancho x alto cm )</label>
+        <input type="text" name="dimension" value=""><br>
+        <label for="Material">Material</label>
+        <input type="text" name="Material"  value=""><br>
+        <label for="pintado">Pintado</label>
+        <input type="text" name="pintado"  value=""><br>
+        <label for="image">Imagen</label>
+        <input type="file" name="image" ><br>
+        <button type="submit">ENVIAR</button>
+    </form>
+</body>
+</html>

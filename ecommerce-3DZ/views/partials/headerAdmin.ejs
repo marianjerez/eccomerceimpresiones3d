@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="../stylesheets/navBarAdmin.css">
+</head>
+<header>
+  <div class="logoHead">
+    <img src="/images/LOGO/LOGOPNG.png">
+  </div>
+  <div class="descriptionHead">
+    <h1>Panel de Control</h1>
+    <div>
+      <% if(url == '/admin') {%> 
+      <a href="/"><button>
+        Ir al Home</button></a>
+      <% } else { %>
+        <a href="/admin"><button>
+          Ir al Panel</button></a>
+      <% } %> 
+      <a href="/"><form action="/users/checkout" method="POST">
+        <button class="userMenuHead" type="submit">
+          Cerrar sesión
+        </button>  
+      </form></a>
+      <p>Usuario: <%= user.nombreApellido %> </p>
+      </div>
+  </div>
+</header>

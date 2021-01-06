@@ -1,0 +1,88 @@
+/*Estilos compartidos*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+  }
+html {
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container{
+    min-height: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+  }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/*CUERPO*/
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+main img{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+}
+.formulario{
+    display: flex;
+    margin: 15px;
+    padding: 15px;
+    font-size: 20px;
+    border: 5px solid white;
+    border-radius: 10%;
+}
+
+.formInterno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulario h3,.cantidad{
+    margin-bottom: 10px;
+}
+
+.formulario #submit{
+    font-weight: bold;
+    color: rgb(17, 128, 17);
+    background: white;
+    width: 100px;
+    height: 50px;
+}
+
+.formulario #submit:hover{
+    color: white;
+    background: rgb(17, 128, 17);
+}
+/*VISTA TELEFONO RESOLUCION MAXIMA 768PX*/
+@media(max-width:768px){
+main{
+    flex-direction: column;
+    align-items: center;
+}
+.formulario{
+    max-width: 250px;
+}
+.container{
+    padding-bottom: 140px;
+  }
+}
+

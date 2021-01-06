@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/detalleCompra.css">
+    <title>Detalle de la compra</title>
+</head>
+<body>
+    <%-include('../partials/header') %>
+    <div class="detalle">
+        <h1>Su pedido ha sido enviado con exito!</h1>
+        <p>En breve nuestro equipo de ventas se comunicara con usted por email a <%= user.email %></p>
+        <div class="info">
+            <h4>El pedido responde a los siguientes datos:</h4>
+            <p>Orden de pedido numero <%= carrito.orderNumber %></p>
+            <p>Fecha del pedido: <%= carrito.createdAt %></p>
+            <p>Monto: $ <%= carrito.total %></p>
+            <p>Usuario: <%= user.nombreApellido %></p>
+        </div>
+    </div>
+    <%-include('../partials/footer') %>
+</body>
+</html>

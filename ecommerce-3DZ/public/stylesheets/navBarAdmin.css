@@ -1,0 +1,85 @@
+/*Estilos Header*/
+header{
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  background-color: white;
+  background: rgba(255,255,255,1);
+  border-bottom: brown solid 5px;
+  /* Para fijar el header:*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  }
+
+.logoHead img{
+  max-width: 100px;
+  max-height: 100px;
+}
+
+header div h1 {
+  margin: 5px;
+  text-align: center;
+  font-size: 40px;
+  color: brown;
+}
+
+.descriptionHead {
+  width: 100%;
+}
+
+.descriptionHead div {
+  display: flex;
+}
+
+.descriptionHead div a {
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  background: lightgrey;
+  border:rgb(177, 176, 176) 2px solid;
+  border-radius: 5px;
+}
+
+.descriptionHead div p {
+  color: gray;
+  margin-top: 25px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+/*VISTA TELEFONO RESOLUCION MAXIMA 768PX*/
+@media(max-width:768px) {
+  header {
+    position: relative;
+  }
+  header div h1 {
+    font-size: 20px;
+  }
+  .descriptionHead {
+    width: 100%;
+  }
+  
+  .descriptionHead div {
+    display: flex;
+  }
+  
+  .descriptionHead div a {
+   font-size: 12px;
+  }
+
+  button {
+    font-size: 12 px;
+  }
+  
+  .descriptionHead div p {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel='stylesheet' href='stylesheets/admin.css'>
+  <title>Administración de Página</title>
+</head>
+<body>
+  <%-include('./partials/headerAdmin')%>
+  <main>
+    <a class="users" href="/users/listado">
+    <section>
+      <p>Administrar Usuarios</p> 
+      <h1><i class="fas fa-users-cog"></i></h1>
+    </section>
+    </a>
+    <a class="products" href="products/listado">
+      <section class="products">
+        <p>Administrar Productos</p>
+        <h1><i class="fas fa-warehouse"></i></h1>
+      </section>
+    </a>
+    <!--
+    <a href="">
+      <section class="sales">
+        <p>Administrar Ventas</p>
+        <h1><i class="fas fa-cart-plus"></i></h1>
+      </section>
+     </a>
+     -->
+  </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    min-height: 100%;
+    padding-bottom: 135px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+.historyContainer{
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 18px;
+    background-color: lightpink;
+    max-width: 300px;
+    border: solid gray 2px;
+    border-radius: 5px;
+    padding: 15px;
+}
+.historyContainer p{
+    margin-bottom: 5px;
+}
+h1{
+    padding-left: 18px;
+    background-color: white;
+}
+
+.elementosContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#mensajeVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#gif{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#gif img{
+    max-width: 450px;
+    margin-top: 35px;
+    border: white 5px solid;
+    border-radius: 25%;
+    align-content: center;
+}
+#mensajeVacio h1{
+    font-size: 22px;
+    border: darkgray solid 2px;
+    background-color: brown;
+    color: white;
+}

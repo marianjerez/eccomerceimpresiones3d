@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+html,body{
+  height: 100%;
+}
+
+.container{
+  min-height: 100%;
+  padding-bottom: 180px;
+}
+body {
+    /* Original de Mariano
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    list-style: none;
+  }
+  .descripcion{
+      
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 15px;
+      color: black;
+      display: flex;
+      text-align: justify;
+      background-color: white;
+      opacity: 80%;
+      justify-content:center;
+      position: relative;
+      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-color: brown 5px;
+      
+  }
+  .muestras{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 15px;
+    
+    /*flex-wrap: wrap;*/
+
+  }
+  .gif1{
+    /*background-color: rgb(187, 255, 148);*/
+  
+    margin: 0px auto;
+    
+     
+  }
+  .ornamento2{
+    /*background-color: rgb(233, 162, 80);*/
+    
+    margin: 0px auto;
+    padding: 15px;
+       
+  }
+  .ornamento1{
+    /*background-color: rgb(160, 101, 199);*/
+    
+    margin: 0px auto;
+    padding: 15px;
+    
+  }
+  .gif1 img{
+    width: 50%;
+  }
+  .ornamento1 img{
+    width: 100%;
+  }
+  .ornamento2 img{
+    width: 100%;
+  }
+  .titulos{
+    text-align: center;
+    color:brown;
+  }
+  .textogif{
+    text-align: justify;
+    padding: 15px ;
+    background-color: white;
+    
+    border-radius: 15px;
+    
+
+  }
+  .textorender{
+    text-align: justify;
+    padding: 15px;
+    background-color: white;
+    
+    border-radius: 15px;
+    
+  }
+  .textoproduccion{
+    text-align: justify;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    
+  }
+  
+  /*BANNER FRASE*/
+.banner{
+  background: white;
+  margin: 0;
+  padding:0;
+}
+
+div.banner img {
+  width: 100%;
+}
+@media(max-width:768px){
+.descripcion{
+  padding: 30px;
+}
+.muestras{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+}

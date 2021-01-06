@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/productos.css">
+    <title>Productos</title>
+</head>
+<body>
+  <%-include('../partials/header') %>
+  <div class="container">
+    <div class="banner" >
+      <img src="/images/IMAGENESEDITADAS/banner.jpg">
+    </div>
+    <main>
+      <div class="texto-superior-producto">
+        <h1>Nuestras Impresiones</h1>
+        <h5>Ofrecemos impresiones de calidad en distinto formato y material: PLA, ABS, Nylon 12, entre otros.</h5>
+      </div>
+    
+        <form action="/products" method="POST" enctype="application/json" class="buscador">
+          <h5>¡Busca tu producto por nombre!</h5>
+          <input type="text" name="search" id="search"><i class="fas fa-search"></i><br>
+          <button type="submit" class="buscar" id="buscarboton">Buscar</button>
+        </form>
+      
+      <% if (productos.length >0) { %>
+        <div class="imagenes-productos">
+          <% for (i=0; i < productos.length; i++){ %>
+            <% if (productos[i] && productos[i].activo != 0) { %>
+            <div class="producto">
+    
+              <img src="<%=productos[i].imagen%>" alt="<%= productos[i].descripcion %>"> 
+    
+              <a href="/products/<%=productos[i].id %>"><h5>COMPRAR</h5></a>
+              <p><%= productos[i].descripcion %></p>
+              <p>Medidas: <%= productos[i].medidas.tamanios %></p>
+              <p>Material: <%= productos[i].materials.tipomaterial %></p>
+              <p>Pintado: <%= productos[i].pintado %></p>
+              <p>Precio: <%= productos[i].precio %> $ </p>
+            </div>
+            <% } %>
+          <% } %>
+      <% } else if (productos.length == 0){ %>   
+        <div class="sinProductos">
+          <h1>No hay productos con esa descripcion</h1>
+          <img src="/images/IMAGENESEDITADAS/56924.png" alt="">
+        </div>
+      <% } %>
+
+    </main>
+  </div>
+  <%-include('../partials/footer')%>
+</body>
+</html>

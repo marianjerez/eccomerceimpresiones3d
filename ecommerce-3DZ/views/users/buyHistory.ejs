@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/buyHistory.css">
+    <title>Historial de Compras</title>
+    <script src="/scripts/buyHistory.js" ></script>
+</head>
+<body>
+    <%-include('../partials/header')%>
+    <div class="container">
+        <h1>Historial de compras 3DZ</h1>
+        <% if(detalleCompras.length > 0) { %>
+            <% detalleCompras.forEach(detalleCompra => { %>
+                <div class="historyContainer">
+                    <p><strong>Fecha: </strong><%= detalleCompra.createdAt %></p>
+                    <p><strong>Total: </strong>$ <%= detalleCompra.total %></p>
+                    <p><strong>Numero de Orden: </strong><%= detalleCompra.orderNumber %></p>
+                    <p><strong>Elementos:</strong></p>
+                        <% detalleCompra.carritoproductos.forEach(element => {  %>
+                            <div class="elementosContainer">
+                                <p><%= element.producto.descripcion %></p><p>x<%= element.cantidad %></p>
+                            </div>
+                        <% }) %>
+                </div>
+            <% }) %>
+                
+        <% } else { %>
+            <div id="mensajeVacio">
+                <h1>Aun no cerraste ninguna compra!</h1>
+            </div>
+            <div id="gif">
+                
+            </div>
+        <% } %>
+    </div>
+
+    <%-include('../partials/footer') %>
+</body>
+</html>

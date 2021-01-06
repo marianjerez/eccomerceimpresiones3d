@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../stylesheets/productDetail.css">
+    <title>Productos</title>
+</head>
+<body>
+  <%-include('../partials/header') %>
+  <div class="container">
+    <main>
+        <% console.log(producto) %>
+        <img src="<%=producto.imagen%>" alt="<% producto.descripcion %>"> 
+        <div class="formulario">
+          <form action="/addToCart" method="POST" enctype="application/json" class="formInterno">
+            <h3><%= producto.descripcion %></h3>
+            <p>Importe (AR$)</p><p class="monto"><%= producto.precio %></p><br>
+            <input type="hidden" name="producto_id" value="<%= producto.id %>">
+            <p class="cantidad">Cantidad</p>
+            <select name="cantidad" id="cantidad">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select><br>
+            
+            <button type="submit" id="submit">AÑADIR AL CARRITO</button>
+          </form>
+        </div>
+    </main>
+  </div>
+  <div class="footerContainer">
+    <%-include('../partials/footer')%>
+  </div>
+</body>
+</html>

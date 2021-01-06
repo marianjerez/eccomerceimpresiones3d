@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Ingresá en tu cuenta de 3DZ impresiones</title>
+</head>
+<body>
+  <header>
+    <section>
+      <a href="/">
+        <img src="/images/LOGO/LOGOPNG.png">
+      </a>
+    </section>
+  </header>
+  
+  <main>
+    <section class="idVista">
+      <h3>Inicio de Sesión</h3>
+    </section>
+    <section class="errores">
+    <% if(typeof errors != 'undefined') { %>
+      <h1 class="errores">ERROR AL ACCEDER</h1>
+      <ul class="errores">
+        <% for(let i = 0; i < errors.length; i++) {%> 
+          <li class="errores">
+            <%= errors[i].msg %> 
+          </li>
+          <% } %>
+      </ul>
+    <% } %>
+    </section>
+    <form action="/users/login" method="POST">
+      <ul>
+        <li>
+          <span class="iconForm">
+            <!--<i class="far fa-user"></i>-->
+            <i class="far fa-envelope"></i>
+          </span>
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="Ingrese su email">
+        </li>
+        <li>
+          <span class="iconForm">
+            <i class="fas fa-unlock-alt"></i>
+          </span>
+          <label for="password"></label>
+          <input type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+        </li>
+      </ul>
+    
+    <section class="remember">
+      <div>
+        <input type="checkbox" name="recordame" id="recordar" value="recordarme">
+        <label for="recordar">Recordarme</label>
+      </div>
+      <a href="/users/newPass">¿Oldidó su Contraseña?</a>
+    </section>
+    <section class="ingresar">
+      <button type="submit">Ingresar</button>
+    </section>
+  </form>
+  <!--
+    <section class="ingreso">
+      <h3>Ingresá con</h3>
+    </section>
+    <%-include('../partials/redes_sociales')%>
+  -->
+  </main>
+  <footer>
+    <section>
+      <p>Sos Nuevo?</p>
+      <div>
+        <i class="fas fa-sign-in-alt"></i>
+        <a href="/users/register">Registrate Acá</a>
+      </div>
+    </section>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="../stylesheets/navBar.css">
+</head>
+<header class="headersup">
+  <div class = "logo">
+    <a href="/">
+      <img src="/images/logo/LOGOPNG.png" alt="logo">
+    </a>
+  </div>
+
+  <div class="linea">
+      <img src="/images/imageneseditadas/barra navegacion.png" alt="linea">
+  </div>
+  <div class="nav-container">
+    <input type="checkbox">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+    <nav> 
+      <ul class="opciones">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/products">PRODUCTOS</a></li>
+            <li><a href="/nosotros">NOSOTROS</a></li>
+            <!--<li><a href="/modelado">MODELADO</a></li>-->
+            <li><a href="/contacto">CONTACTO</a></li>
+            <li><a href="/chart"><i class="fas fa-shopping-basket"></i></a></li>
+            <li>
+              <% if(user == undefined) {%>
+              <a href="/users/login"><i class="fas fa-portrait"></i></a>
+            <!-- start menu desplegable -->
+            <% } else { %> 
+              <i class="fas fa-portrait"></i>
+              <ul class="userMenu">
+                  <li>
+                  <% if(user.admin == 0) {%> 
+                  <a class="userMenu" id="misDatos" href="/users/<%= user.id %> ">
+                      <i class="fas fa-user-cog"></i>
+                      Mi Perfil
+                    </a>
+                  </li>
+                  <% } else { %>
+                  <a class="userMenu" href="/admin">
+                      <i class="fas fa-user-cog"></i>
+                      Administrar
+                    </a>
+                  </li>
+                  <% } %> 
+                  <li>
+                    <form action="/users/checkout" method="POST" id="cerrarSesion">
+                      <button class="userMenu" type="submit">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Cerrar sesión
+                      </button>  
+                    </form>
+                  </li>
+                  <% } %>  
+                </ul>
+              <!-- end menu desplegable -->    
+            </li>
+          </ul>
+    </nav>
+  </div>
+  <section class="user">
+    <% if(user != undefined) {%> 
+      <p> <%= user.nombreApellido %> </p>
+     <% } %> 
+  </section>
+
+</header>
+  
+

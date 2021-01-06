@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/editusers.css">
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Edición de Usuario</title>
+</head>
+<body>
+  <header>
+  <section>
+    <img class="logo"src="/images/LOGO/LOGOPNG.png">
+  </section>
+</header>
+  <main>
+  <section class="idVista">
+    <h2>Edición de Usuario</h2>
+  </section>
+  <section class="errores">
+    <% if(typeof errors != 'undefined') { %>
+      <h1 class="errores">Errores Detectados</h1>
+      <ul class="errores">
+        <% for(let i = 0; i < errors.length; i++) {%> 
+          <li class="errores">
+            <%= errors[i].msg %> 
+          </li>
+          <% } %>
+      </ul>
+    <% } %>  
+  </section>  
+  <form class= "formularioedit" action="/users/edit/<%= usuario.id %> " method="POST">
+    <ul>
+      <li>
+        <label class="titulo" for="userName">Nombre y Apellido</label>
+        <!--<input class="dato" type="text" name="userName" id="user" value="<%= usuario.nombreApellido %> ">-->
+        <p class="datoUser"> <%= usuario.nombreApellido %></p>
+      </li>
+      <li>
+        <p class="titulo">Correo Electrónico</p>
+      <p class="datoUser"><%= usuario.email %></p>
+      </li>
+      <li>
+        <label class="titulo" for="Telefono">Teléfono</label>
+        <input class="dato" type="text" name="telefono" id="telefono" value="<%= usuario.telefono %>">
+      </li>
+      <li>
+        <label class="titulo" for="Domicilio">Domicilio</label>
+        <input class="dato" type="text" name="domicilio" id="domicilio" value="<%= usuario.domicilio %>">
+      </li>
+      <li>
+        <label class="titulo" for="Localidad">Localidad</label>
+        <input class="dato" type="text" name="localidad" id="localidad" value="<%= usuario.localidad %>" >
+      <!--</li>
+        <p>Cuenta vinculada al mail: <%= usuario.email %></p>
+      </li>-->
+    </ul>
+    <section class="actualizar">
+      <button class="actualiza" type="submit">Actualizar</button>
+      <button class="salir">
+        <a href="/users/listado"></a>
+        Salir
+      </button>  
+    </section>
+  </form>
+  </main>
+</body>
+</html>

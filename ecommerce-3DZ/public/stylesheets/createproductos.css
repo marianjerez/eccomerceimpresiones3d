@@ -1,0 +1,104 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    color:white;
+    border: solid 2px white;
+    background-color: brown;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+input[type="file" i]{
+    max-width: 135px;
+}
+
+.logo{
+    width: 100px;
+    padding: 20px;
+}
+
+.errores ul{
+    list-style: none;
+    color: red;
+    background-color: salmon;
+}
+
+.errores ul li{
+    margin-bottom:5px;
+    padding: 10px;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.actualizar {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+  
+button {
+    font-size: medium;
+    color: rgb(172, 47, 53);
+    background-color:white;
+    border-radius: 6px;
+    border: none;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+button:hover {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+
+.select {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.select div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.salir:hover {
+    background-color: green;
+    color: yellow;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+
+/*RESPONSIVE*/

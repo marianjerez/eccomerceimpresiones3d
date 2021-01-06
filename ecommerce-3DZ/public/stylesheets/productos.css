@@ -1,0 +1,178 @@
+/*Estilos compartidos*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+html,body{
+  height: 100%;
+}
+
+.container{
+  min-height: 100%;
+  padding-bottom: 130px;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* CUERPO */
+
+.texto-superior-producto{
+    padding: 3vw;
+    font-size: 18px;
+    background-color: white;
+}
+.texto-superior-producto h5{
+    margin-top: 5px;
+    color: grey;
+    font-size: 22px;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vw;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: white 5px solid;
+    border-radius: 10%;
+    background-color: whitesmoke;
+
+}
+.producto img{
+    width: 100%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+.producto h5{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    background-color:gray;
+    color: white;
+    border-radius: 5px;
+    height: 25px;
+    width: 100px;
+}
+.producto h5:hover{
+    background-color:rgb(17, 128, 17);
+}
+
+.imagenes-productos{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.buscador{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.fa-search{
+    font-size: 16px;
+    border-left: none;
+    position: relative;
+    top: 2px;
+    left: -18px;
+}
+
+button .buscar{
+    position: relative;
+    
+}
+
+.sinProductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.sinProductos h1{
+    color: brown;
+    margin-bottom: 10px;
+}
+.sinProductos img{
+    width: 30%;
+}
+
+#search{
+    height: 18px;
+    width: 30%;
+    border: brown solid 2.5px;
+    border-radius: 5px;
+}
+#buscarboton{
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 112, 34);
+    border-radius: 10px;
+
+}
+
+/*BANNER FRASE*/
+.banner{
+    background: white;
+    margin: 0;
+    padding:0;
+  }
+  
+  div.banner img {
+    width: 100%;
+  }
+  
+/*VISTA TELEFONO RESOLUCION MAXIMA 768PX*/
+@media(max-width:768px){
+
+/*CUERPO DE LA PAGINA*/
+.texto-superior-producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-superior-producto h5,h1{
+    max-width: 518px;
+    text-align: center;
+}
+
+#search{
+    width: 50%;
+}
+.sinProductos img{
+    width: 50%;
+}
+.imagenes-productos{
+    padding-bottom: 15px;
+}
+}
+

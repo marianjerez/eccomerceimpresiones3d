@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/editproductos.css">
+    <title>Edicion de producto</title>
+    <script src="/scripts/edit.js"></script>
+</head>
+<body>
+<!--
+    <div class="errores">
+        <ul></ul>
+    </div>
+-->
+    
+    <form class= "formularioedit" action="/products/edit/<%=producto.id%>" method="POST" enctype="multipart/form-data">
+        <img class="logo"src="/images/LOGO/LOGOPNG.png">
+        <section class="errores">
+            <% if(typeof errors != 'undefined') { %>
+              <h1 class="errores">ERROR AL ENVIAR</h1>
+              <ul class="errores">
+                <% for(let i = 0; i < errors.length; i++) {%> 
+                  <li class="errores">
+                    <%= errors[i].msg %> 
+                  </li>
+                  <% } %>
+              </ul>
+            <% } %>
+        </section>
+        <label for="name">Nombre de producto</label>
+        <input type="text" name="name" id="name" value="<%= producto.descripcion %>"><br>
+        <label for="pintado">Pintado</label>
+        <input type="text" name="pintado"  value="<%= producto.pintado %>"><br>
+        <label for="price">Importe $</label>
+        <input type="number" name="price"  value="<%= producto.precio %>">
+        <section class="select">
+            <div>
+            <label for="dimension"></label>
+            <p>Dimensiones</p>
+            <select name="dimension" id="dimension">
+                <% for(let i = 0; i < medidas.length; i++){ %>
+                    <% if(medidas[i].id == producto.medida_id){ %>
+                        <option value="<%= medidas[i].id %>" selected>
+                            <%= medidas[i].tamanios %>
+                        </option>
+                    <% } else { %>
+                        <option value="<%= medidas[i].id %>">
+                            <%= medidas[i].tamanios %>
+                        </option>
+                    <% } %>
+            <% } %>
+            </select>
+            </div>
+            <div>
+            <label for="Material"></label>
+            <p>Material</p>
+            <select name="Material" id="Material">
+                <% for(let i = 0; i < materials.length; i++){ %>
+                    <% if(materials[i].id == producto.material_id){ %>
+                        <option value="<%= materials[i].id %>" selected>
+                            <%= materials[i].tipomaterial %>
+                        </option>
+                    <% } else { %>
+                        <option value="<%= materials[i].id %>">
+                            <%= materials[i].tipomaterial %>
+                        </option>
+                    <% } %>
+            <% } %>
+            </select>
+            </div>
+        </section>
+            <label for="image">Imagen</label>
+            <input type="file" name="image">
+        <section class="actualizar">
+            <button class="actualiza" type="submit">Actualizar</button>
+            <button class="elimina">
+                <a href="/products/destroy/<%=producto.id%>">Eliminar</a>
+            </button>
+            <button class="salir">
+                <a href="/products/listado"></a>
+                Salir
+            </button>
+        </section>
+    </form>
+</body>
+</html>

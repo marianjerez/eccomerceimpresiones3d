@@ -1,0 +1,188 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+body{
+    /* Original de Mariano
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image:url("/images/IMAGENESEDITADAS/fondocontacto.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;*/
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+html,body{
+    height: 100%;
+}
+.container{
+    min-height: 100%;
+}
+.losdosbloques{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.contactobloque{
+    
+   
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    
+       
+    
+    
+    /*background-color: blue;*/
+}
+.formulariobloque{
+    
+   
+    width: 50%;  
+    background-color: rgba(128, 0, 32, 0.267);
+    
+
+    
+    
+    
+}
+.camposformulario{
+    padding: 10px;
+    
+
+}
+
+.wmlbloque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 30px;  
+}
+
+#nomb{
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+#email{
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#tel{
+    width: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#mensaje{
+    width: 380px;
+    height: 155px;
+    text-align: left;
+    padding-top: 30px;
+    
+}
+#enviarboton{
+    width: 100px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 112, 34);
+    border-radius: 10px;
+}
+
+
+::placeholder {
+    vertical-align: bottom;
+}
+
+ul{
+    list-style: none;
+}
+
+.icon img{
+    width: 35px;
+    height: 35px;
+
+}
+.textocontacto{
+    color: brown;
+    padding: 10px;
+}
+.icon{
+    align-items: center;
+}
+.icon p{
+    color:brown;
+}
+
+  /*BANNER FRASE*/
+  .banner{
+    background: white;
+    margin: 0;
+    padding:0;
+  }
+  
+  div.banner img {
+    width: 100%;
+  }
+
+  @media(max-width:768px){
+    .container{
+        padding-bottom: 290px;
+    }
+    .losdosbloques{
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+      
+    }
+    .contactobloque{
+        width: auto;
+        text-align: center;
+        
+    }
+    .formulariobloque{
+        width: auto;
+        padding-top: 30px;
+    }
+    .footercontacto{
+        padding-top: 10px;
+    }
+    #nomb{
+        max-width: 200px;
+    
+    }
+    #email{
+        max-width: 300px;
+    }
+    #tel{
+        max-width: 200px;
+    }
+    #mensaje{
+        max-width: 300px;
+        
+    }
+    
+
+
+
+  }
+  
+

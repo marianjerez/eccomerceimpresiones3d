@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/register.css">
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Cambia tu contraseña</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <section>
+        <a href="/"><img src="/images/LOGO/LOGOPNG.png"></a>
+      </section>
+    </header>
+    <main>
+      <section class="idVista">
+        <h3>Cambio de Contraseña</h3>
+      </section>
+      <section class="errores">
+      <% if(typeof errors != 'undefined') { %>
+        <h1 class="errores">Errores Detectados</h1>
+        <ul class="errores">
+          <% for(let i = 0; i < errors.length; i++) {%> 
+            <li class="errores">
+              <%= errors[i].msg %> 
+            </li>
+            <% } %>
+        </ul>
+      <% } %>  
+    </section>
+      <form action="/users/newPass" method="POST" autocomplete="on">
+        <ul>
+          <li>
+            <span class="iconForm">
+              <i class="far fa-envelope"></i>
+            </span>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email">
+          </li>
+          <li>
+            <span class="iconForm">
+              <i class="fas fa-unlock-alt"></i>
+            </span>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Ingrese su nueva contraseña">
+          </li>
+          <li>
+            <span class="iconForm">
+              <i class="fas fa-lock"></i>
+            </span>
+            <label for="password"></label>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme su nueva contraseña">
+          </li>
+
+        </ul>
+  
+      <section class="registrar">
+        <button type="submit">Confirmar</button>
+      </section>
+    </form>    
+  </main>
+  <footer>
+    <section>
+      <p>Te arrepentiste o te acordaste?</p>
+      <div>
+        <i class="fas fa-sign-in-alt"></i>
+        <a href="/users/login">Inicia Sesión</a>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>

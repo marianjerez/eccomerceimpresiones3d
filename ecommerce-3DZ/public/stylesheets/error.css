@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: auto;
+  margin-top: 30px;
+  background-image:url("images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+img {
+  width: 35%;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  }
+
+footer {
+  margin-bottom: 20px;
+  margin-top: auto;
+  text-align: center;
+  font-size: 20px;
+  color: blue;
+}

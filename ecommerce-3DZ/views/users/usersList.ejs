@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/listusers.css">
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Administración de Usuarios</title>
+</head>
+<body>
+  <%-include('../partials/headerAdmin')%>
+  <main>
+  <section class="adminUsers">
+    <h1>Detalle de Administradores Activos</h1>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Nombre y Apellido</th>
+        <th>Correo Electrónico</th>
+        <th>Nivel</th>
+        <th>Acción</th>
+        <% if (user.admin == 2) { %>
+          <th>Cambiar Nivel Auth</th>
+        <% } %>  
+      </tr>
+      <% for(usuario of usuarios) { %>
+        <% if(usuario.admin != 0 && usuario.activo != 0) {%>
+      <tr>
+        <td>
+          <%= usuario.id %>
+        </td>
+        <td> 
+          <%= usuario.nombreApellido %>
+        </td>
+        <td> 
+          <%= usuario.email %>
+        </td>
+        <td>
+          <% if(usuario.admin == 1) {%>
+            Supervisor
+          <% } else { %> 
+            Administrador
+          <% } %> 
+        </td>
+        <td class="options">
+        <button class="ver"><a href="/users/<%= usuario.id %> "><i class="far fa-eye"></i></a></button>
+        <!--
+          <button><a href="/users/edit/<%= usuario.id %> ">Modificar</a></button>
+        -->
+        <form action="/users/destroy/<%= usuario.id %> " method="POST">
+          <button class="delete"><i class="fas fa-trash-alt"></i></button>
+        </form>
+        </td>
+        <% if (user.admin == 2) { %>
+          <td class="auth">
+          <form action="/users/permission/<%= usuario.id %> " method="POST">
+            <input type="radio" id="consumer" name="userType" value="0" checked>
+            <label class="userType" for="consumer">User</label>
+            <input type="radio" id="superv" name="userType" value="1" checked>
+            <label class="userType" for="superv">Sup</label>
+            <input type="radio" id="admin" name="userType" value="2" checked>
+            <label class="userType" for="admin">Admin</label>
+            <button><i class="fas fa-save"></i></button>
+          </form>
+        </td>  
+         <% } %> 
+        <% } %> 
+      </tr>
+        <% } %>
+        </table>
+    </section>
+  <section class="customerUsers">
+    <section class="activos">
+      <h1>Detalle de Usuarios Activos</h1>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Nombre y Apellido</th>
+          <th>Correo Electrónico</th>
+          <th>Acción</th>
+          <% if (user.admin == 2) { %>
+            <th>Cambiar Nivel Auth</th>
+          <% } %> 
+        </tr>
+        <% for(usuario of usuarios) { %>
+          <% if(usuario.admin == 0 && usuario.activo ==1) {%>
+        <tr>
+          <td>
+            <%= usuario.id %>
+          </td>
+          <td> 
+            <%= usuario.nombreApellido %>
+          </td>
+          <td> 
+            <%= usuario.email %>
+          </td>
+          <td class="options">
+            <button class="ver"><a href="/users/<%= usuario.id %> "><i class="far fa-eye"></i></a></button>
+            <!--
+            <button><a href="/users/edit/<%= usuario.id %> ">Modificar</a></button>
+            -->
+            <form action="/users/destroy/<%= usuario.id %> " method="POST">
+              <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </form>
+          </td>
+          <% if (user.admin == 2) { %>
+            <td class="auth">
+              <form action="/users/permission/<%= usuario.id %> " method="POST">
+                <input type="radio" id="admin" name="userType" value="0" checked>
+                <label class="userType" for="admin">Usr</label>
+                <input type="radio" id="consumer" name="userType" value="1" checked>
+                <label class="userType" for="consumer">Sup</label>
+                <button><i class="fas fa-save"></i></button>
+              </form>
+            </td>  
+             <% } %>   
+          <% } %> 
+        </tr>
+          <% } %>
+          </table>
+      </section>
+      <section class="inactivos">
+        <h1>Detalle de Usuarios Eliminados</h1>
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Nombre y Apellido</th>
+            <th>Correo Electrónico</th>
+            <th>Nivel</th>
+            <th>Acción</th>
+          </tr>
+          <% for(usuario of usuarios) { %>
+            <% if(usuario.activo == 0) {%>
+          <tr>
+            <td>
+              <%= usuario.id %>
+            </td>
+            <td> 
+              <%= usuario.nombreApellido %>
+            </td>
+            <td> 
+              <%= usuario.email %>
+            </td>
+            <td>
+              <% if(usuario.admin == 0) {%>
+                Usuario
+              <% } else if (usuario.admin == 1) { %> 
+                Supervisor
+              <% } else { %> 
+                Administrador
+              <% } %> 
+            </td>
+            <td class="options">
+              <button class="ver"><a href="/users/<%= usuario.id %> "><i class="far fa-eye"></i></a></button>
+              <form action="/users/activate/<%= usuario.id %> " method="POST">
+                <button class="activate"><i class="fas fa-folder-plus"></i></button>
+              </form>
+            </td>  
+            <% } %> 
+            </tr>
+            <% } %>
+            </table>
+        </section>
+  </section>
+  </main>
+</body>
+</html>

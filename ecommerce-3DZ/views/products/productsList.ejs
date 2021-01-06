@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/listproducts.css">
+  <!--Fuentes Google-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Iconos Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Administración de Productos</title>
+</head>
+<body>
+  <%-include('../partials/headerAdmin')%>
+  <main>
+    <section class="create">
+      <a href="/products/create">
+          <section class="products">
+            <p>Crear Nuevo Producto
+              <i class="fas fa-warehouse"></i>
+            </p>
+          </section>
+      </a>
+    </section>
+  <section class="activos">
+  <h1>Listado de Productos Activos</h1>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Descripción</th>
+        <th>Pintado</th>
+        <th>Precio</th>
+        <th>Material</th>
+        <th>Medida</th>
+        <th>Acción</th>  
+      </tr>
+      <% for(producto of productos) { %>
+        <% if(producto.activo == 1) { %> 
+      <tr>
+        <td>
+          <%= producto.id %>
+        </td>
+        <td> 
+          <%= producto.descripcion %>
+        </td>
+        <td> 
+          <%= producto.pintado %>
+        </td>
+        <td class="number">
+          <%= producto.precio %>  
+        </td>
+        <td>
+          <%= producto.material_id  %>  
+        </td>
+        <td>
+          <%= producto.medida_id  %>  
+        </td>
+        <td class="options">
+          <button class="ver"><a href="/products/edit/<%= producto.id %> "><i class="far fa-eye"></i></a></button>
+        <!--
+          <button class="edit"><a href="/products/edit/<%= producto.id %> ">Modificar</a></button>
+        -->
+          <button class="delete"><a href="/products/destroy/<%=producto.id%>"><i class="fas fa-trash-alt"></i></a></button>
+        </td>
+      <% } %>
+      <% } %>
+    </table>
+    </section>
+    <section class="inactivos">
+      <h1>Listado de Productos Inactivos</h1>
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Descripción</th>
+        <th>Pintado</th>
+        <th>Precio</th>
+        <th>Material</th>
+        <th>Medida</th>
+        <th>Acción</th>  
+      </tr>
+      <% for(producto of productos) { %>
+        <% if(producto.activo == 0) { %> 
+      <tr>
+        <td>
+          <%= producto.id %>
+        </td>
+        <td> 
+          <%= producto.descripcion %>
+        </td>
+        <td> 
+          <%= producto.pintado %>
+        </td>
+        <td class="number">
+          <%= producto.precio %>  
+        </td>
+        <td>
+          <%= producto.material_id  %>  
+        </td>
+        <td>
+          <%= producto.medida_id  %>  
+        </td>
+        <td class="options">
+          <form action="/products/activate/<%= producto.id %> " method="POST">
+            <button class="activate"><i class="fas fa-folder-plus"></i></button>
+          </form>
+        </td>
+      <% } %>
+      <% } %>
+    </table>
+    </section>
+</main>
+</body>
+</html>

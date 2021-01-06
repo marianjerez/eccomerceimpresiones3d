@@ -1,0 +1,182 @@
+/*Estilos Body*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: brown;
+  }
+  
+/*Estilos Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 30px;
+    border-bottom: medium ridge gray;
+  }
+  
+  
+header section img {
+    padding: 5px;
+    width: 100%;
+    max-width: 80px;
+  }
+  
+  /*Estilo Section*/
+  
+  main section.idVista {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  main section.idVista h2{
+    margin-top: 0px;
+    font-weight: bold;
+  }
+  
+  
+  /*Estilos Main*/
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  main ul {
+    list-style: none;
+    padding: 0px;
+  }
+  
+  main ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1.errores {
+    text-align: center;
+    text-decoration: underline red;
+    font-weight: 900;
+  }
+  
+  .errores {
+    list-style-type: decimal;
+    color: red;
+    background-color: rgb(248, 227, 91);
+    margin-left:10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    }
+  
+  
+  .titulo {
+      font-style: oblique;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 5px;
+  }
+
+  .dato {
+    background-color: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+ 
+  .dato:hover, input[type="text"]:focus {
+    background-color: lightgoldenrodyellow;
+    color: brown;
+  }
+
+  main section.actualizar {
+    display: flex;
+    justify-content: center;
+    margin: 5px 20px 20px 20px;
+  }
+  
+  main section.actualizar button{
+    font-size: medium;
+    color: rgb(172, 47, 53);
+    background-color:white;
+    border-radius: 6px;
+    border: none;
+    height: 35px;
+  }
+  
+  main section.actualizar button.actualiza:hover {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+  
+  main section.actualizar  {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .datoUser {
+    background-color: lightgray;
+    color: grey;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .datoUser:hover {
+    color: brown;
+    }
+
+  button.salir {
+    margin-left: 20px;
+  }
+
+  button.salir a {
+    text-decoration: none;
+  }
+
+  button.salir a:hover {
+    color: white;
+    font-weight: bold;
+  }
+
+  button.salir:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+     
+  /*Responsive*/
+  
+  @media (min-width:360px) {
+  
+    html {
+      background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+    }
+  
+    body {
+      width: 360px;
+      border: solid 1px rgb(189,189,189);
+      border-radius: 8px;
+      background-color: brown;
+    }
+  
+  }

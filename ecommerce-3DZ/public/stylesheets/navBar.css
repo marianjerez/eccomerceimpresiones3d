@@ -1,0 +1,299 @@
+/* AQUI COMIENZA LA BARRA DE NAVEGACION*/
+html{
+  height: 100vh;
+}
+
+header{
+  font-family: 'Roboto', sans-serif;
+  padding: 3px 7px 3px 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  background: rgba(255,255,255,1);
+  }
+  
+  .nav-container input,.nav-container .fa-bars,.nav-container .fa-times{
+    display: none;
+  }
+  
+  .logo img{
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .logo img:hover{
+    opacity: 0.7;
+  }
+  .linea{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .linea img{
+    width: 100%;
+  }
+  
+  .nav-container{
+    display: flex;
+    align-self: center;
+  }
+  .opciones{
+    align-self: center;
+    display: flex;
+    align-items: center;
+  }
+  .opciones li{
+    /*overflow: hidden;*/
+    list-style: none;
+  }
+
+  .opciones li a{
+    color: black;
+    text-decoration: none;
+    background: lightgrey;
+    margin-left: 10px;
+    border:rgb(177, 176, 176) 2px solid;
+    border-radius: 5px;
+  }
+  .opciones li a:hover{
+    color: brown;
+  }
+  .opciones li:last-child{
+    border: none;
+    font-size: 35px;
+    -webkit-box-shadow: 0px 0px 12px -200px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px -200px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px -200px rgba(0,0,0,0.75);
+  }
+  
+  #login{
+    align-self: center;
+    margin-left: 10px;
+    font-size: 35px;
+  }
+
+/*Nuevo Menú*/
+
+.opciones li a img{
+  width: 100%;
+  margin: 3px;
+  padding: 3px;
+}
+
+.opciones li ul {
+  display: none;
+}
+
+.opciones li:hover ul{
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  position: absolute;
+  right: 0px;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+
+.opciones li:last-child a.userMenu {
+  display: block;
+  border-radius: 0%;
+  width: 100%;
+  height: 20px;
+  font-size: 13px;
+  padding-top: 5px;
+  text-align: left;
+  color: black;
+  background: lightgrey;
+  margin-left: 0px;
+}
+
+.opciones li:last-child form button.userMenu {
+  display: flex;
+  border-radius: 0%;
+  border: none;
+  width: 100%;
+  height: 20px;
+  font-size: 13px;
+  padding-top: 3px;
+  text-align: left;
+  color: black;
+  background: lightgrey;
+  margin-left: 0px;
+}
+
+.opciones li:last-child form button.userMenu:hover {
+  cursor: pointer;
+}
+
+.fa-sign-out-alt, .fa-user {
+  display: flex;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+.opciones li:nth-child(5) {
+  padding-left: 10px;
+  margin-right: 15px;
+}
+.opciones li:nth-child(5) a{
+  color: white;
+  background-color: brown;
+  border-color: brown;
+  font-size: 25px;
+}
+.opciones li:nth-child(6) a{
+  border: none;
+  background-color: white;
+}
+
+.user {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-weight: bold;
+  color: brown; 
+}
+/*Fin nuevo menu*/
+
+  
+
+  /*VISTA TELEFONO RESOLUCION MAXIMA 768PX*/
+@media(max-width:768px){
+    
+    /*BARRA DE NAVEGACION MEDIA768*/
+    .headersup{
+      flex-wrap: wrap;
+    }
+    
+    .opciones{
+      position: relative;
+      right: 55px;
+      top: 10px;
+      background-color: lightgray;
+      border: solid black 3px;
+      padding: 5px;
+      flex-direction: column;
+      min-height: 200px;
+      font-size: 15px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .opciones li{
+      margin-bottom: 10px;
+      margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .opciones li a{
+      background-color: brown;
+      color: white;
+      border: white 2px solid;
+      padding: 2px;
+    }
+    
+    .opciones li:last-child{
+      border: none;
+      font-size: 35px;
+      color: brown;
+    }
+    .opciones li:hover ul{
+      right: 0px;
+      bottom: 5px;
+    }
+
+    .userMenu{
+      height: 50px;
+      z-index: 1;
+    }
+    .userMenu li{
+      width: 100px;
+      position: relative;
+      right: -9px;
+    }
+    .userMenu li:first-child{
+      width: 94px;
+    }
+    .userMenu li form{
+      position: relative;
+      right: -1px;
+      bottom: 11px;
+      border: solid 1px white;
+    }
+    .user{
+      max-width: 120px;
+      top: 102px;
+      left: 10px;
+    }
+    .opciones li:nth-child(6) a{
+      margin-top: 42px;
+      padding-right: 5px;
+      background-color: lightgray;
+    }
+
+    .opciones li:last-child a#misDatos{
+      width: 95px;
+      border: solid 1px white;
+    }
+    .opciones li:last-child form button.userMenu {
+     width: 104%;
+    }
+    .nav-container input,.nav-container .fa-bars,.nav-container .fa-times{
+      position: absolute;  
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      right: 0;
+      top: 0;
+      width: 48px;
+      height: 48px; 
+    }
+    
+    .nav-container input, .nav-container .fa-bars, .nav-container .fa-times {
+      display: inherit;
+    }
+    
+    .nav-container .fa-bars, .nav-container .fa-times {
+      font-size: 48px;
+      pointer-events: none;
+    }
+    
+    .nav-container input[type="checkbox"] {
+      opacity: 0; 
+    }
+     
+    .nav-container {
+      color: black;
+      position: relative; 
+      min-height: 48px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .nav-container nav {
+      display: none;
+    }
+    
+    .nav-container input:checked ~ nav {
+      display: block;
+    }
+    
+    .nav-container input:checked ~ .fa-bars {
+      display: none;
+    }
+     
+    .nav-container input:not(:checked) ~ .fa-times {
+      display: none;
+    }
+    
+    .linea{
+      display: none;
+    }
+    
+    .logo{
+      margin-bottom: 10px;
+    }
+
+}

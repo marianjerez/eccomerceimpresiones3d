@@ -1,0 +1,180 @@
+/*Estilos Body*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin: auto;
+  margin-top: 30px;
+  background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+}
+
+/*Estilos Header*/
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: rgb(235,236,240);
+  border-radius: 8px 8px 0px 0px;
+}
+
+header img {
+  width: 12%;
+  margin: 3px;
+  padding: 3px;
+}
+
+/*Estilos Main*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+main section {
+  display: flex;
+  flex-direction: row;
+  /*background-color: rgb(235,236,240);
+  border-radius: 0px;*/
+}
+
+main section article {
+  background-color: rgb(235,236,240);
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+/* --- Estilos de Productos --- */
+
+main section article.prd_image {
+  width: 15%;
+  padding: 5px 0px;
+  border-radius: 8px 0px 0px 8px;
+}
+
+main section article.prd_image img {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main section article.prd_detail {
+  width: 55%;
+  padding: 5px;
+}
+
+main section article.prd_price {
+  width: 20%;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+main section article p {
+  margin: 0px;
+}
+
+main section article.prd_qty {
+  width: 5%;
+  padding: 5px;
+  text-align: center; 
+}
+
+main section article.prd_qty input[type="number"] {
+  max-width: 25%;
+}
+
+main section article.prd_trash {
+  width: 5%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 0px 8px 8px 0px;
+}
+
+main section article.prd_trash img {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main section.money_chart {
+  flex-direction: column;
+  background-color:white;
+  width: 50%;
+  max-width: 180px;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+main section.money_chart article {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+main section.money_chart article p.type {
+  margin-left: 5px;
+}
+
+main section.money_chart article p.number {
+  margin-right: 5px;
+}
+
+main section.money_chart h4 {
+  width: 100%;
+  font-size: 14px;
+  margin: 8px 1px;
+  text-align: center;
+  border-bottom: 2px ridge gray;
+}
+
+main section article.money_chart_total {
+  font-weight: bold;
+  border-top: 2px ridge gray;
+  border-bottom: 1px ridge gray;
+  background-color: rgb(235,236,240);
+}
+
+main section article.money_chart_button {
+  justify-content: center;
+}
+
+main section article.money_chart_button button {
+  font-size: small;
+  color: white;
+  background-color:rgb(172, 47, 53);
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+  height: 20px;
+}
+
+main section article.money_chart_button button:hover {
+  background-color: rgb(236,40,55);
+  box-shadow: 0 4px 16px rgb(172,47,53);
+  transition: all 0.2s ease;
+}
+
+main section article.continue_shop {
+  justify-content: center;
+}
+
+
+/*Responsive*/
+
+@media (min-width:360px) {
+
+  html {
+    background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+  }
+
+  body {
+    height: auto;
+    width: 360px;
+    border-radius: 8px;
+    border: solid 1px rgb(189,189,189);
+    background-color: gray;
+  }
+}

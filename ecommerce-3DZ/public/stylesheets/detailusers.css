@@ -1,0 +1,149 @@
+/*Estilos Body*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: brown;
+  }
+  
+/*Estilos Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 30px;
+    border-bottom: medium ridge gray;
+  }
+  
+  
+header section img {
+    padding: 5px;
+    width: 100%;
+    max-width: 80px;
+  }
+  
+  /*Estilo Section*/
+  
+  main section.idVista {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  main section.idVista h2{
+    margin-top: 0px;
+    font-weight: bold;
+  }
+  
+  
+  /*Estilos Main*/
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  main ul {
+    list-style: none;
+    padding: 0px;
+  }
+  
+  main ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .titulo {
+      font-style: oblique;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 5px;
+  }
+
+  .dato {
+    background-color: white;
+    color: grey;
+    width: 70%;
+    height: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+ 
+  main section.botones {
+    display: flex;
+    justify-content: center;
+    margin: 5px 20px 20px 20px;
+  }
+  
+  main section.botones a button{
+    font-size: medium;
+    color: rgb(172, 47, 53);
+    background-color:white;
+    border-radius: 6px;
+    border: none;
+    height: 35px;
+  }
+
+  
+  .edit {
+    margin-right: 20px;
+  }
+  
+  main section.botones a.edit button:hover {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+
+  a.salir button {
+    font-size: medium;
+    color: rgb(172, 47, 53);
+    background-color:white;
+    border-radius: 6px;
+    border: none;
+    height: 35px;
+  
+  }
+
+  a.salir button:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgb(172,47,53);
+    transition: all 0.2s ease;
+  }
+  
+  main section.botones  {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+     
+  /*Responsive*/
+  
+  @media (min-width:360px) {
+  
+    html {
+      background-image:url("/images/IMAGENESEDITADAS/fondoopacidad60.jpg");
+    }
+  
+    body {
+      width: 360px;
+      border: solid 1px rgb(189,189,189);
+      border-radius: 8px;
+      background-color: brown;
+    }
+  
+  }
