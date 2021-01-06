@@ -2,7 +2,7 @@ E-commerce- Impresiones 3D
 
 ## Lineamientos Generales
 
-Vamos a diseñar y desarrollar un ecommerce cuyos objetivos serán:
+Se diseñó y desarrolló un ecommerce cuyos objetivos serán:
 
 - Venta de Objetos en stock, producidos mediante impresiones 3d.
 - Producción de objetos a pedido, producidos mediante impresiones 3d.
